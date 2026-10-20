@@ -4,7 +4,7 @@
 >
 > 本文基于真实项目《手机远程操控电脑》整理：从「想用搬不动的台式电脑」这个很土的需求出发，到 WebRTC 自研方案跑通、再一路排掉「省流加速」的隐蔽大坑。
 
-<p align="center"><a href="https://yulianyanxi.top/assets/up/1792485370279_remote_control_v9.mp4"><img src="https://yulianyanxi.top/assets/up/1792485330975_rc10_open.jpg" width="640"></a><br><a href="https://yulianyanxi.top/assets/up/1792485370279_remote_control_v9.mp4"><b>▶ 点击播放：完整演示视频（86 秒，含全部功能实录）</b></a></p>
+<p align="center"><a href="https://yulianyanxi.top/assets/up/1792486283472_remote_control_v9.mp4"><img src="https://yulianyanxi.top/assets/up/1792486278994_rc10_open.jpg" width="640"></a><br><a href="https://yulianyanxi.top/assets/up/1792486283472_remote_control_v9.mp4"><b>▶ 点击播放：完整演示视频（86 秒，含全部功能实录）</b></a></p>
 
 ## 一、为什么做这个
 
@@ -14,7 +14,7 @@
 
 于是我给自己做了一个工具：**手机浏览器打开一个网页，就能看到家里电脑的屏幕、听到电脑的声音，还能直接动它的鼠标和键盘**——跟坐在电脑前差不多。
 
-![用手机直接远程控制电脑](https://yulianyanxi.top/assets/up/1792485361313_rc02_wifi.jpg)
+![用手机直接远程控制电脑](https://yulianyanxi.top/assets/up/1792486279340_rc02_wifi.jpg)
 
 对它的期望只有三条：
 
@@ -26,7 +26,7 @@
 
 我先用 WiFi 局域网把功能跑通：手机连上同一个 WiFi，浏览器输个地址，电脑桌面就出现在手机上了，手指划到哪里，电脑的鼠标就跟到哪里。
 
-![WiFi 局域网跑通](https://yulianyanxi.top/assets/up/1792485365204_rc11_phone_ctrl.jpg)
+![WiFi 局域网跑通](https://yulianyanxi.top/assets/up/1792486280028_rc11_phone_ctrl.jpg)
 
 ## 三、出门换流量，页面死活打不开（最大的坑）
 
@@ -36,23 +36,23 @@
 
 **解法**：换成 Edge 浏览器（或直接关掉省流加速/云加速），一下就连上了。
 
-![手机端已连接界面](https://yulianyanxi.top/assets/up/1792485362282_rc03_block.jpg)
+![手机端已连接界面](https://yulianyanxi.top/assets/up/1792486280966_rc03_block.jpg)
 
 ## 四、连上之后能干什么
 
 手机横过来，电脑桌面铺满整个屏幕；**两指一捏，哪里看不清就放大哪里**。
 
-![横屏铺满 + 双指放大，顶部可见已连接·68ms](https://yulianyanxi.top/assets/up/1792485363109_rc05_swipe.jpg)
+![横屏铺满 + 双指放大，顶部可见已连接·68ms](https://yulianyanxi.top/assets/up/1792486282174_rc05_swipe.jpg)
 
 操作也很直接：**一根手指滑动，鼠标就跟着走；轻点是左键，按住是右键**。点键盘，弹出一整套键盘——回车、退格、方向键全都有，中文也能打。
 
-![手势映射：轻点左键 / 按住右键](https://yulianyanxi.top/assets/up/1792485363478_rc06_keyboard.jpg)
+![手势映射：轻点左键 / 按住右键](https://yulianyanxi.top/assets/up/1792486283537_rc06_keyboard.jpg)
 
 电脑开着好几个窗口，**三指一滑就能切过去**，只看一个；工具栏挡画面，点一下就收；电脑上复制的东西，手机一点就取来；画质有四档，网不好就调低。
 
-![三指切窗：多窗口直接切](https://yulianyanxi.top/assets/up/1792485363895_rc07_switch.jpg)
+![三指切窗：多窗口直接切](https://yulianyanxi.top/assets/up/1792486283757_rc07_switch.jpg)
 
-![画质四档，顶部状态栏实时显示延迟和码率](https://yulianyanxi.top/assets/up/1792485364395_rc08_latency.jpg)
+![画质四档，顶部状态栏实时显示延迟和码率](https://yulianyanxi.top/assets/up/1792486284003_rc08_latency.jpg)
 
 ## 五、延迟只有 70 毫秒
 
@@ -70,7 +70,7 @@
 
 因为电脑端是主动连出去的，家里路由器一个设置都不用动；服务器也是现成的，整套方案**不额外花一分钱**。
 
-![技术架构：屏幕和键鼠转成网页能收的信号](https://yulianyanxi.top/assets/up/1792485364771_rc09_arch.jpg)
+![技术架构：屏幕和键鼠转成网页能收的信号](https://yulianyanxi.top/assets/up/1792486284164_rc09_arch.jpg)
 
 ## 七、踩坑速查（给想复刻的人）
 
